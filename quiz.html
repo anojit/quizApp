@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<!-- Starts of html -->
+<html lang="en">
+
+    <!-- It's head -->
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Title is shown here -->
+        <title>Quiz3.0</title>
+
+        <!-- CSS links -->
+        <link rel="stylesheet" href="quiz.css">
+        <!--  -->
+
+    </head>
+
+    <!-- body starts here... -->
+    <body>
+
+        <!-- Home box div -->
+        <div class="home-box custom-box">
+            <h3>Instruction:</h3>
+
+            <p>
+                Total Number of Questions: <span class="total-number-of-questions"></span>
+            </p>
+
+            <button type="button" class="btn" onclick="startQuiz()">Start Quiz</button>
+
+        </div>
+
+        <!-- Quiz box div -->
+        <div class="quiz-box custom-box hide">
+
+            <!-- It will contain the question -->
+            <div id="question-container" class="question-container"></div>
+
+            <!-- This area for navigation buttons. -->
+            <div class="navigation">
+
+                <!-- Previous BUTTON -->
+                <button type="button" id="previous" class="previous-btn btn">Prev</button>
+
+                <!-- Submit BUTTON -->
+                <input type="submit" value="Submit" id="submit" class="submit-btn btn" style="margin: 10% 15%;">
+
+                <!-- Next BUTTON -->
+                <button type="button" id="next" class="next-btn btn">Next</button>
+
+            </div>
+
+        </div>
+
+        <!-- Result box -->
+        <div class="result-box custom-box hide">
+
+            <h1>Quiz Result</h1>
+
+            <!-- Displaying table -->
+            <table>
+                <tr> <!-- row 1 -->
+                    <td>Total Question</td>
+                    <td> <span class="total-question"></span> </td>
+                </tr>
+
+                <tr> <!-- row 2 -->
+                    <td>Attempt</td>
+                    <td> <span class="total-attempt"></span>  </td>
+                </tr>
+
+                <tr> <!-- row 3 -->
+                    <td>Correct</td>
+                    <td> <span class="total-correct"></span> </td>
+                </tr>
+
+                <tr> <!-- row 4 -->
+                    <td>Worng</td>
+                    <td> <span class="total-wrong"></span> </td>
+                </tr>
+
+                <tr> <!-- row 5 -->
+                    <td>Percentage</td>
+                    <td> <span class="percentage"></span> </td>
+                </tr>
+
+                <tr> <!-- row 6 -->
+                    <td>Your Score</td>
+                    <td> <span class="total-score"></span> </td>
+                </tr>
+            </table>
+
+            <!-- Try again BUTTON -->
+            <button type="button" class="btn" onclick="tryAgain()">Try Again</button>
+
+            <!-- Go to Home BUTTON -->
+            <button type="button" class="btn" onclick="goToHome()">Go to Home</button>
+
+        </div>
+        
+        <!-- JavaScript files are included here. -->
+        <script src="question.js"></script>
+        <script src="quiz.js"></script>
+        <!--  -->
+
+    </body>
+    <!-- END of body -->
+
+</html>
+<!-- END of html -->

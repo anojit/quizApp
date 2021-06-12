@@ -1,0 +1,367 @@
+/* url of GOOGLE font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* Universal styling */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+/* Styling of body */
+body{
+    margin: 0 10%;
+    padding: 0;
+    max-width: 90%;
+    /* display: flex; */
+    /* justify-content: center; */
+    align-items: center;
+    font-size: 16px;
+    background-color: #009688;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}    
+
+/* ////////////// Styles of remaining document... /////////////////// */
+
+/*
+    There are 3 boxes (means div) comes under custom-box:
+    1. home-box
+    2. quiz-box
+    3. resul-box
+*/
+.custom-box{
+    /* min-width: 90%;
+    max-height: 70%; */
+    background-color: #ffffff;
+    margin: 10% 0;
+    padding: 5% 5%;
+    border-radius: 10px;
+    animation: fadeInRight 1s ease;
+}
+
+@keyframes fadeInRight{
+    0%{
+        transform: translateX(40px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.custom-box::before,
+.custom-box::after{
+    content: '';
+    clear: both;
+    display: table;
+}
+
+.hide{
+    display: none;
+}
+
+.home-box{
+    width: 70%;
+    height: 15%;
+}
+
+.home-box h3{
+    width: 90%;
+    font-style: 18px;
+    color: #000;
+    font-weight: 500;
+    line-height: 25px;
+}
+
+.home-box p{
+    font-size: 16px;
+    margin-bottom: 3%;
+    line-height: 22px;
+    color: #000;
+    font-weight: 400;
+}
+
+.home-box p span{
+    font-weight: 500;
+}
+
+.home-box .btn{
+    margin: 5% 0;
+    padding: 2% 5%;
+}
+
+.btn{
+    padding: 10% 5%;
+    max-height: 10px;
+    background-color: #009688;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.btn:hover{
+    background-color: #409b92;
+}
+
+.disabled,
+.disabled:hover{
+    background-color: gray;
+}
+
+
+.quiz-box .question-number,
+.quiz-box .question-text,
+/* .option-text, */
+.quiz-box .answer-indicator{
+    width: 100%;
+    float: left;
+    overflow: auto;
+}
+
+.option-text{
+    padding-left: 10px;
+}
+
+.previous-btn{
+    float: left;
+    width: 15%;
+    height: 0;
+    text-align: right;
+
+    clip-path: polygon(0 50%, 100% 100%, 100% 0);
+    border-radius: 5px;
+}
+
+.navigation{
+    width: 100%;
+    float: left;
+    /* border-top: 1px solid #000; */
+    text-align: center;
+}
+
+.submit-btn{
+    /* margin-top: auto; */
+    padding: 0 1%;
+    width: 25%;
+    max-height: 10%;
+    text-align: center;
+
+    border-radius: 5px;
+}
+
+.next-btn{
+    float: right;
+    width: 15%;
+    height: 0;
+    text-align: left;
+
+    clip-path: polygon(100% 50%, 0 0, 0 100%);
+    border-radius: 5px;
+}
+
+.quiz-box .question-number{
+    font-size: 18px;
+    color: #009688;
+    font-weight: 600;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    line-height: 25px;
+}
+
+.quiz-box .question-text{
+    font-size: 22px;
+    color: #000;
+    line-height: 28px;
+    font-weight: 400;
+    padding: 20px 0;
+    margin: 0;
+}
+
+
+.option{
+    background-color: #ccc;
+    padding: 2% 5%;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    opacity: 0;
+    animation: fadeIn 0.3s ease forwards;
+    position: relative;
+    overflow: hidden;
+}
+
+input[type=radio]{
+    cursor: pointer;
+}
+
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.result-box{
+    /* display: flex;
+    justify-content: center; */
+    text-align: center;
+
+}
+
+.result-box .hide{
+    display: none;
+}
+
+.result-box h1{
+    font-size: 36px;
+    line-height: 42px;
+    color: #009688;
+}
+
+.result-box table{
+    float: left;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+}
+
+.result-box table td{
+    border: 1px solid #ccc;
+    padding: 8px 15px;
+    font-weight: 500;
+    color: #000;
+    width: 50%;
+    text-align: left;
+    font-size: 18px;
+}
+
+.result-box .btn{
+    /* float: left; */
+    /* width: 100%; */
+    margin-right: 20px;
+}
+/* 
+@media screen and (max-width: 700px) {
+    .result-box .btn{
+        width: 50%;
+        margin-top: 20px;
+    }
+
+    .body{
+        padding: 16px;
+    }
+
+    .result-box table{
+        margin: 20px 25%;
+        width: 50%;
+        
+    }
+
+    .custom-box{
+        min-width: 600px;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .result-box .btn{
+        width: 50%;
+        margin-top: 20px;
+    }
+
+    .body{
+        padding: 16px;
+    }
+
+    .result-box table{
+        margin: 20px 25%;
+        width: 50%;
+        
+    }
+
+    .custom-box{
+        min-width: 400px;
+    }
+
+    .previous-btn{
+            float: left; 
+        width: 17%;
+            height: 60px;
+            text-align: right;
+
+            clip-path: polygon(0 50%, 100% 100%, 100% 0);
+            border-radius: 5px;
+    }
+
+    .next-btn{
+            float: right;
+        width: 17%;
+            height: 60px;
+            text-align: left;
+
+            clip-path: polygon(100% 50%, 0 0, 0 100%);
+            border-radius: 5px;
+    }
+
+} */
+
+/* 
+@media screen and (max-width: 500px) {
+    .result-box .btn{
+        width: 50%;
+        margin-top: 20px;
+    }
+
+    .body{
+        padding: 16px;
+    }
+
+    .result-box table{
+        margin: 20px 25%;
+        width: 50%;
+        
+    }
+
+    .custom-box{
+        min-width: 300px;
+    }
+
+    .previous-btn{
+        padding: 0 4px;
+        float: left;
+        width: 23%;
+        height: 60px;
+        text-align: right;
+
+        clip-path: polygon(0 50%, 100% 100%, 100% 0);
+        border-radius: 5px;
+    }
+
+    .next-btn{
+        padding: 0 4px;
+        float: right;
+        width: 23%;
+        height: 60px;
+        text-align: left;
+
+        clip-path: polygon(100% 50%, 0 0, 0 100%);
+        border-radius: 5px;
+    }
+
+}
+
+.option-text{
+    word-wrap: break-word;
+} */
