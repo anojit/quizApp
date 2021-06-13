@@ -1,7 +1,5 @@
-/* url of GOOGLE font */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
-/* Universal styling */
 *{
     box-sizing: border-box;
     margin: 0;
@@ -9,13 +7,12 @@
     outline: none;
 }
 
-/* Styling of body */
 body{
-    margin: 0 10%;
+    margin: 0 30%;
     padding: 0;
-    max-width: 90%;
-    /* display: flex; */
-    /* justify-content: center; */
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
     align-items: center;
     font-size: 16px;
     background-color: #009688;
@@ -23,20 +20,12 @@ body{
     font-weight: 400;
 }    
 
-/* ////////////// Styles of remaining document... /////////////////// */
 
-/*
-    There are 3 boxes (means div) comes under custom-box:
-    1. home-box
-    2. quiz-box
-    3. resul-box
-*/
 .custom-box{
-    /* min-width: 90%;
-    max-height: 70%; */
+    min-width: 700px;
     background-color: #ffffff;
-    margin: 10% 0;
-    padding: 5% 5%;
+    margin: 50px 25%;
+    padding: 30px;
     border-radius: 10px;
     animation: fadeInRight 1s ease;
 }
@@ -63,22 +52,17 @@ body{
     display: none;
 }
 
-.home-box{
-    width: 70%;
-    height: 15%;
-}
-
 .home-box h3{
-    width: 90%;
     font-style: 18px;
     color: #000;
     font-weight: 500;
+    margin-bottom: 15px;
     line-height: 25px;
 }
 
 .home-box p{
     font-size: 16px;
-    margin-bottom: 3%;
+    margin-bottom: 10px;
     line-height: 22px;
     color: #000;
     font-weight: 400;
@@ -88,14 +72,8 @@ body{
     font-weight: 500;
 }
 
-.home-box .btn{
-    margin: 5% 0;
-    padding: 2% 5%;
-}
-
 .btn{
-    padding: 10% 5%;
-    max-height: 10px;
+    padding: 15px 7px;
     background-color: #009688;
     color: #fff;
     border: none;
@@ -104,6 +82,12 @@ body{
     cursor: pointer;
     display: inline-block;
 }
+
+.home-box .btn{
+    margin-top: 20px;
+    padding: 15px 45px;
+}
+
 
 .btn:hover{
     background-color: #409b92;
@@ -130,8 +114,8 @@ body{
 
 .previous-btn{
     float: left;
-    width: 15%;
-    height: 0;
+    width: 10%;
+    height: 60px;
     text-align: right;
 
     clip-path: polygon(0 50%, 100% 100%, 100% 0);
@@ -147,9 +131,9 @@ body{
 
 .submit-btn{
     /* margin-top: auto; */
-    padding: 0 1%;
+    padding-top: 10px;
     width: 25%;
-    max-height: 10%;
+    height: 50px;
     text-align: center;
 
     border-radius: 5px;
@@ -157,8 +141,8 @@ body{
 
 .next-btn{
     float: right;
-    width: 15%;
-    height: 0;
+    width: 10%;
+    height: 60px;
     text-align: left;
 
     clip-path: polygon(100% 50%, 0 0, 0 100%);
@@ -183,10 +167,13 @@ body{
     margin: 0;
 }
 
+.quiz-box .option-container{
+    margin: 0;
+}
 
-.option{
+/* .quiz-box .question-container .eachQuestion .option-container*/ .option{
     background-color: #ccc;
-    padding: 2% 5%;
+    padding: 15px;
     font-size: 16px;
     line-height: 22px;
     color: #000;
@@ -203,7 +190,6 @@ input[type=radio]{
     cursor: pointer;
 }
 
-
 @keyframes fadeIn{
     0%{
         opacity: 0;
@@ -211,6 +197,10 @@ input[type=radio]{
     100%{
         opacity: 1;
     }
+}
+
+.quiz-box .btn{
+    margin: 20px 0;
 }
 
 .result-box{
@@ -252,7 +242,7 @@ input[type=radio]{
     /* width: 100%; */
     margin-right: 20px;
 }
-/* 
+
 @media screen and (max-width: 700px) {
     .result-box .btn{
         width: 50%;
@@ -296,28 +286,28 @@ input[type=radio]{
     }
 
     .previous-btn{
-            float: left; 
+        /* float: left; */
         width: 17%;
-            height: 60px;
-            text-align: right;
+        /* height: 60px; */
+        /* text-align: right; */
 
-            clip-path: polygon(0 50%, 100% 100%, 100% 0);
-            border-radius: 5px;
+        /* clip-path: polygon(0 50%, 100% 100%, 100% 0); */
+        /* border-radius: 5px; */
     }
 
     .next-btn{
-            float: right;
+        /* float: right; */
         width: 17%;
-            height: 60px;
-            text-align: left;
+        /* height: 60px; */
+        /* text-align: left; */
 
-            clip-path: polygon(100% 50%, 0 0, 0 100%);
-            border-radius: 5px;
+        /* clip-path: polygon(100% 50%, 0 0, 0 100%); */
+        /* border-radius: 5px; */
     }
 
-} */
+}
 
-/* 
+
 @media screen and (max-width: 500px) {
     .result-box .btn{
         width: 50%;
@@ -340,28 +330,28 @@ input[type=radio]{
 
     .previous-btn{
         padding: 0 4px;
-        float: left;
+        /* float: left; */
         width: 23%;
-        height: 60px;
-        text-align: right;
+        /* height: 60px; */
+        /* text-align: right; */
 
-        clip-path: polygon(0 50%, 100% 100%, 100% 0);
-        border-radius: 5px;
+        /* clip-path: polygon(0 50%, 100% 100%, 100% 0); */
+        /* border-radius: 5px; */
     }
 
     .next-btn{
         padding: 0 4px;
-        float: right;
+        /* float: right; */
         width: 23%;
-        height: 60px;
-        text-align: left;
+        /* height: 60px; */
+        /* text-align: left; */
 
-        clip-path: polygon(100% 50%, 0 0, 0 100%);
-        border-radius: 5px;
+        /* clip-path: polygon(100% 50%, 0 0, 0 100%); */
+        /* border-radius: 5px; */
     }
 
 }
 
 .option-text{
     word-wrap: break-word;
-} */
+}
