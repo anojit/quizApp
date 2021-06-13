@@ -113,6 +113,7 @@ body{
 }
 
 .previous-btn{
+    margin: 5% 0;
     float: left;
     width: 10%;
     height: 60px;
@@ -125,12 +126,12 @@ body{
 .navigation{
     width: 100%;
     float: left;
-    /* border-top: 1px solid #000; */
+    border-top: 1px solid #000;
     text-align: center;
 }
 
 .submit-btn{
-    /* margin-top: auto; */
+    margin: 6% 8%;
     padding-top: 10px;
     width: 25%;
     height: 50px;
@@ -140,6 +141,7 @@ body{
 }
 
 .next-btn{
+    margin: 5% 0;
     float: right;
     width: 10%;
     height: 60px;
@@ -164,10 +166,6 @@ body{
     line-height: 28px;
     font-weight: 400;
     padding: 20px 0;
-    margin: 0;
-}
-
-.quiz-box .option-container{
     margin: 0;
 }
 
@@ -197,10 +195,6 @@ input[type=radio]{
     100%{
         opacity: 1;
     }
-}
-
-.quiz-box .btn{
-    margin: 20px 0;
 }
 
 .result-box{
@@ -239,14 +233,14 @@ input[type=radio]{
 
 .result-box .btn{
     /* float: left; */
-    /* width: 100%; */
-    margin-right: 20px;
+    width: 25%;
+    margin: 5%;
 }
 
 @media screen and (max-width: 700px) {
     .result-box .btn{
         width: 50%;
-        margin-top: 20px;
+        margin: 10px 0;
     }
 
     .body{
@@ -276,7 +270,7 @@ input[type=radio]{
     }
 
     .result-box table{
-        margin: 20px 25%;
+        margin: 20px 17%;
         width: 50%;
         
     }
@@ -319,7 +313,7 @@ input[type=radio]{
     }
 
     .result-box table{
-        margin: 20px 25%;
+        margin: 20px 3%;
         width: 50%;
         
     }
